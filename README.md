@@ -38,8 +38,8 @@ The main entity of the system is `Product`. It contains the following attributes
 - `name`: A unique and non-nullable field representing the product's name.
 - `description`: A description of the product.
 - `price`: A non-nullable `BigDecimal` value representing the product price, which must be greater than zero.
-- `stockQuantity`: The stock level of the product, which cannot be negative.
-- `category`: An embedded `Category` object representing the product category.
+- `stockQuantity`: The stock level of the product, which cannot be negative or null.
+- `category`: An non null embedded `Category` object representing the product category.
 
 The `Product` class also contains the following methods:
 - `create(ProductParam productParam)`: A factory method to create a `Product` from a `ProductParam` object. It validates the fields before creating the product.
